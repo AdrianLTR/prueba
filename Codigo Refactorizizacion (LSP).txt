@@ -1,0 +1,80 @@
+
+
+public class Program {
+    public static void Main() {
+        Course onlineCourse = new OnlineCourse { CourseId = 1, Title = "Programacion web" };
+        Course offlineCourse = new OfflineCourse { CourseId = 2, Title = "Introduccion base de datos" };
+        Course hybridCourse = new HybridCourse { CourseId = 3, Title = "Programacion 2" };
+
+        Student student = new Student { StudentId = 1, Name = "Adrian Lorenzo" };
+
+        onlineCourse.Subscribe(student);
+        offlineCourse.Subscribe(student);
+        hybridCourse.Subscribe(student);
+
+        Console.WriteLine(onlineCourse.GetCourseDetails());
+        Console.WriteLine(offlineCourse.GetCourseDetails());
+        Console.WriteLine(hybridCourse.GetCourseDetails());
+    }
+}
+
+
+
+
+
+
+public abstract class Course {
+    public int CourseId { get; set; }
+    public string Title { get; set; }
+
+    public abstract void Subscribe(Student std);
+    public abstract string GetCourseDetails();
+}
+
+public class OnlineCourse : Course {
+    public override void Subscribe(Student std) {
+       
+    }
+
+    public override string GetCourseDetails() {
+        return $"Online Course: {Title} (ID: {CourseId})";
+    }
+}
+
+public class OfflineCourse : Course {
+    public override void Subscribe(Student std) {
+        
+    }
+
+    public override string GetCourseDetails() {
+        return $"Offline Course: {Title} (ID: {CourseId})";
+    }
+}
+
+public class HybridCourse : Course {
+    public override void Subscribe(Student std) {
+        
+    }
+
+    public override string GetCourseDetails() {
+        return $"Hybrid Course: {Title} (ID: {CourseId})";
+    }
+}
+
+public class Student {
+    public int StudentId { get; set; }
+    public string Name { get; set; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
