@@ -1,0 +1,67 @@
+public abstract class Course
+{
+    public int CourseId { get; set; }
+    public string Title { get; set; }
+
+    public abstract void Subscribe(Student std);
+}
+
+public class OnlineCourse : Course
+{
+    public override void Subscribe(Student std)
+    {
+      
+    }
+}
+
+public class OfflineCourse : Course
+{
+    public override void Subscribe(Student std)
+    {
+        
+    }
+}
+
+// Nueva clase que sigue el principio Open/Closed
+public class HybridCourse : Course
+{
+    private OnlineCourse onlineCourse;
+    private OfflineCourse offlineCourse;
+
+    public HybridCourse(OnlineCourse online, OfflineCourse offline)
+    {
+        onlineCourse = online;
+        offlineCourse = offline;
+    }
+
+    public override void Subscribe(Student std)
+    {
+        onlineCourse.Subscribe(std);
+        offlineCourse.Subscribe(std);
+    }
+}
+
+// Clase Student para completar el ejemplo
+public class Student
+{
+    public int StudentId { get; set; }
+    public string Name { get; set; }
+}
+
+// Código cliente para probar la implementación
+public class Program
+{
+    public static void Main()
+    {
+        Student student = new Student { StudentId = 1, Name = "Adrian Lorenzo" };
+
+        OnlineCourse onlineCourse = new OnlineCourse { CourseId = 94, Title = "Proyecto final" };
+        OfflineCourse offlineCourse = new OfflineCourse { CourseId = 103, Title = "Advanced C# Workshop" };
+        
+        HybridCourse hybridCourse = new HybridCourse(onlineCourse, offlineCourse);
+        
+        hybridCourse.Subscribe(student);
+
+        Console.WriteLine("Subcripcions a curso hibrido completado.");
+    }
+}
