@@ -1,0 +1,7 @@
+C:\Users\Adrian\Desktop\Tareas prog\Principio ISP\Principio ISP\bin\Debug\Principio ISP.exe.config
+C:\Users\Adrian\Desktop\Tareas prog\Principio ISP\Principio ISP\bin\Debug\Principio ISP.exe
+C:\Users\Adrian\Desktop\Tareas prog\Principio ISP\Principio ISP\bin\Debug\Principio ISP.pdb
+C:\Users\Adrian\Desktop\Tareas prog\Principio ISP\Principio ISP\obj\Debug\Principio ISP.csproj.AssemblyReference.cache
+C:\Users\Adrian\Desktop\Tareas prog\Principio ISP\Principio ISP\obj\Debug\Principio ISP.csproj.CoreCompileInputs.cache
+C:\Users\Adrian\Desktop\Tareas prog\Principio ISP\Principio ISP\obj\Debug\Principio ISP.exe
+C:\Users\Adrian\Desktop\Tareas prog\Principio ISP\Principio ISP\obj\Debug\Principio ISP.pdb
